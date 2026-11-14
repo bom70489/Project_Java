@@ -3,6 +3,7 @@ import java.util.Scanner;
 import Visual.Colours;
 import character.Enemy;
 import character.Player;
+import mode.GameMode;
 import mode.Mode;
 import roles.*;
 
@@ -25,7 +26,8 @@ public class Main {
         System.out.println("------- Select Mode -------");
         System.out.println(Colours.GREEN + "1.) Easy" + Colours.ORANGE + "\n2.) Medium" + Colours.RED + "\n3.) Hard" + Colours.RESET);
         System.out.print("Enter Your mode: ");
-        double gameDifficulty = Mode.selectMode(sc.nextInt());
+        GameMode gm = new GameMode();
+        double gameDifficulty = gm.selectMode(sc.nextInt());
         System.out.println("Difficulty multiplier: " + gameDifficulty);
 
         do{

@@ -1,7 +1,6 @@
 package roles;
-import mode.Mode;
 
-public abstract class Status implements Affinity , Mode {
+public abstract class Status implements Affinity {
     protected double maxHealth;
     protected double health;
     protected double attack;
