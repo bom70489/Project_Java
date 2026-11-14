@@ -12,9 +12,9 @@ public class Enemy extends Character{
     }
     
     public void showInfo() {
-        System.out.println(Colours.RED + "Name : " + this.name_Player);
-        System.out.println("Role : " + this.role_Player.getRoleName() + Colours.RESET); 
-        System.out.println("-------- Roles Status --------");
-        role_Player.showStutus();
+        System.out.println("Name : " + Colours.RED + this.name_Player + Colours.RESET);
+        System.out.println("Role : " + Colours.RED + this.role_Player.getRoleName() + Colours.RESET); 
+        System.out.println(Colours.YELLOW + "-------- Roles Status --------" + Colours.RESET);
+        role_Player.showStutus("\u001B[31m");
     }
 }

@@ -1,5 +1,7 @@
 package roles;
 
+import Visual.Colours;
+
 // full advantage against rider and berserker x(1.5)
 // disadvantage against mage x(0.75), no advantage against other classes x(1.0)
 public class Assassin extends Status {
@@ -18,13 +20,13 @@ public class Assassin extends Status {
     }
     
     @Override 
-    public void showStutus() {
-        System.out.println("Hp : " + health + " / " + maxHealth);
-        System.out.println("Attack : " + attack);
-        System.out.println("Defence : " + defence);
-        System.out.println("Magic : " + magic);
-        System.out.println("Magic_resistance : " + magic_resist);
-        System.out.println("Speed : " + speed);
+    public void showStutus(String colours) {
+        System.out.println("Hp : " + colours + health + " / " + maxHealth + Colours.RESET);
+        System.out.println("Attack : " + colours + attack + Colours.RESET);
+        System.out.println("Defence : " + colours + defence + Colours.RESET);
+        System.out.println("Magic : " + colours + magic + Colours.RESET);
+        System.out.println("Magic_resistance : " + colours + magic_resist + Colours.RESET);
+        System.out.println("Speed : " + colours + speed + Colours.RESET);
     }
     public void levelUp(){
         this.maxHealth += 10;

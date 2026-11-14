@@ -11,7 +11,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Please input your name : ");
         Player player1 = new Player(sc.nextLine());
-        System.out.println("------- Classes -------");
+        System.out.println(Colours.GOLD + "------- Classes -------" + Colours.RESET);
         System.out.println("1.) Warrior \n2.) Archer \n3.) Lancer \n4.) Rider \n5.) Assassin \n6.) Mage \n7.) Berserker");
         System.out.print("\nSelect your class : ");
         player1.setRole(Status.selectRole(sc.nextInt()));
@@ -22,7 +22,7 @@ public class Main {
         int maxPotion = 3;
 
         // select Mode
-        System.out.println("------- Select Mode -------");
+        System.out.println(Colours.GOLD + "------- Select Mode -------" + Colours.RESET);
         System.out.println(Colours.GREEN + "1.) Easy" + Colours.ORANGE + "\n2.) Medium" + Colours.RED + "\n3.) Hard" + Colours.RESET);
         System.out.print("Enter Your mode: ");
         double gameDifficulty = GameMode.selectMode(sc.nextInt());
@@ -39,10 +39,10 @@ public class Main {
 
             // Show Info
             int turn = 1 ;
-            System.out.println("\n------ Your enemy -------");
+            System.out.println(Colours.GOLD + "\n------ Your enemy -------" + Colours.RESET);
             player2.showInfo();
         while(player1.getRole().getHealth() > 0 && player2.getRole().getHealth() > 0){
-            System.out.println("----------- Turn " + turn + " -----------");
+            System.out.println(Colours.GOLD + "----------- Turn " + turn + " -----------" + Colours.RESET);
             if(turn % 2 == 1){
                 System.out.println("Your turn");
                 do{

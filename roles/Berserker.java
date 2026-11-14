@@ -1,5 +1,7 @@
 package roles;
 
+import Visual.Colours;
+
 // Half Advantage against all classes x(1.25)
 public class Berserker extends Status{
         public Berserker(){
@@ -16,13 +18,13 @@ public class Berserker extends Status{
         return "Berserker";
     }
     @Override 
-    public void showStutus() {
-        System.out.println("Hp : " + health + " / " + maxHealth);
-        System.out.println("Attack : " + attack);
-        System.out.println("Defence : " + defence);
-        System.out.println("Magic : " + magic);
-        System.out.println("Magic_resistance : " + magic_resist);
-        System.out.println("Speed : " + speed);
+    public void showStutus(String colours) {
+        System.out.println("Hp : " + colours + health + " / " + maxHealth + Colours.RESET);
+        System.out.println("Attack : " + colours + attack + Colours.RESET);
+        System.out.println("Defence : " + colours + defence + Colours.RESET);
+        System.out.println("Magic : " + colours + magic + Colours.RESET);
+        System.out.println("Magic_resistance : " + colours + magic_resist + Colours.RESET);
+        System.out.println("Speed : " + colours + speed + Colours.RESET);
     }
     public void levelUp(){
         this.maxHealth += 25;
