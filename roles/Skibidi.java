@@ -17,7 +17,7 @@ public class Skibidi extends Status{
     }
     
     @Override 
-    public void showStutus() {
+    public void showStutus(String colours) {
         System.out.println("Secret");
     }
     public void levelUp(){

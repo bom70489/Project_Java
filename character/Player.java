@@ -1,4 +1,7 @@
 package character;
+
+import Visual.Colours;
+
 public class Player extends Character{    
     private int level;
     public Player() {
@@ -16,9 +19,9 @@ public class Player extends Character{
     public void showInfo() {
         System.out.print("----------- Level : " + level + " --------");
         System.out.println();
-        System.out.println("Name : " + this.name_Player);
-        System.out.println("Role : " + this.role_Player.getRoleName()); 
-        System.out.println("-------- Roles Status --------");
-        role_Player.showStutus();
+        System.out.println("Name : " + Colours.BLUE + this.name_Player + Colours.RESET);
+        System.out.println("Role : " + Colours.BLUE + this.role_Player.getRoleName() + Colours.RESET); 
+        System.out.println(Colours.YELLOW + "-------- Roles Status --------" + Colours.RESET);
+        role_Player.showStutus("\u001B[34m");
     }
 }

@@ -71,7 +71,7 @@ public abstract class Status implements Affinity {
     }
 
     public abstract String getRoleName();
-    public abstract void showStutus();
+    public abstract void showStutus(String Colours);
     public abstract void levelUp();
     public abstract double checkAdvantage(Status role);
 }
